@@ -1,0 +1,549 @@
+/* ////////////// Login //////////////// */
+
+.background {
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    background-image: url(back.jpg);
+    background-size: cover;
+    background-blend-mode: difference;
+    z-index: 1;
+}
+.cover{
+    opacity: 0.7;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+}
+
+.login-card{
+    width:450px;
+    z-index: 6;
+    height: 450px;
+    position: absolute;
+    background:linear-gradient(90deg, #d3cce3 0%,#e9e4f0 100% );
+    left:50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    border-radius: 4px;
+}
+.login-card h1 {
+    position: relative;
+    color: black;
+    font-size: 32px;
+    text-align: center;
+}
+
+.login-card form{
+    position: relative;
+    left:25%;
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.login-card form input{
+    position: relative;
+    top: 20px;
+    background-color: none;
+    width:200px;
+    padding: 10px;
+    height: 20px;
+    outline: none;
+    margin-top: 25px;
+    direction: rtl;
+    border-radius: 5px;
+    border: none;
+    transition: 0.4s ease-in-out;
+    text-align: right;
+}
+.login-card form input:focus{
+    padding: 10px 20px;
+    margin-top: 25px;
+    border-radius: 5px;
+    border: none;
+}
+
+.login-card form button{
+    padding:10px 100px;
+    margin-top: 60px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: larger;
+    background-color: black;
+    font-family: 'Tajawal', sans-serif;
+    cursor: pointer;
+    text-align: center;
+}
+.login-card button:disabled {
+    opacity: 0.5;
+    cursor: progress;
+  }
+
+.loading-spinner {
+    content:"";
+    position: relative;
+    height: 35px;
+    width: 35px;
+    margin-bottom: -15px;
+    border:4px solid lightgray;
+    border-top:3px solid coral;
+    border-left:4px solid coral;
+    border-radius: 50%; 
+    animation: spinner 1s linear infinite;
+    z-index: 2;
+    opacity: 0.8;
+}
+
+@keyframes spinner {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.err {
+    width: 300px;
+    height: 100px;
+    background-color: #f33e41;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.5s ease;
+    position: fixed;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    right: 50px;
+    justify-content: center;
+    transform: translateX(600%);
+    z-index: 5;
+}
+.err hr {
+    background-color: white;
+    border: 1.5px solid white;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+    animation: 10s load ;
+    transition: 2s ease;
+}
+@keyframes load{
+  0%{
+   width: 2px;
+  }
+  100%{  
+    padding-left: 86%;
+  }
+}
+.err button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f82528;
+    border: none;
+    cursor: pointer;
+    font-size: larger;
+    color: white;
+}
+.open-err {
+   width: 300px;
+   border: 1px solid white;
+   height: 100px;
+   background-color: #f82528;
+   border-radius: 5px;
+   text-align: center;
+   position: fixed;
+   top: 10px;
+   display: flex;
+   align-items: center;
+   right: 50px;
+   justify-content: center;
+   z-index: 5;
+   transform: translateX(-0%);
+   transition: 0.5s ease;
+}
+.err p {
+    position: absolute;
+    color: #fff;
+    font-size: larger;
+    top: 20px;
+}
+
+.error {
+    width: 250px;
+    height: 10px;
+    background-color: red;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.5s ease;
+}
+.error h4 {
+    position: relative;
+    color: #fff;
+    bottom: 14%;
+    font-size: 15px;
+}
+/* //////////////// SignUp /////////////// */
+.signup-card{
+    width:450px;
+    z-index: 6;
+    height: 500px;
+    position: absolute;
+    background:linear-gradient(90deg, #d3cce3 0%,#e9e4f0 100% );
+    left:50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    border-radius: 4px;
+}
+.signup-card form h1 {
+    position: relative;
+    font-size: 26px;
+    color: black;
+}
+
+.signup-card form{
+    position: relative;
+    left:25%;
+    width: 50%;
+    display: flex;
+    flex-flow: column;
+    justify-content:center;
+    align-items: center;
+}
+
+.signup-card form input{
+    position: relative;
+    background-color: none;
+    width:200px;
+    padding: 10px;
+    height: 20px;
+    outline: none;
+    margin-top: 30px;
+    direction: rtl;
+    border-radius: 5px;
+    border: none;
+    transition: 0.4s ease-in-out;
+    text-align: right;
+}
+.signup-card form input:focus{
+    padding: 8px 20px;
+    margin-top: 25px;
+    border-radius: 5px;
+    border: none;
+}
+
+.signup-card form button{
+    padding:10px 100px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: larger;
+    background-color: black;
+    font-family: 'Tajawal', sans-serif;
+    cursor: pointer;
+    text-align: center;
+}
+.signup-card form button:disabled {
+    opacity: 0.5;
+    cursor: progress;
+  }
+
+.loading-spinner {
+    content:"";
+    position: relative;
+    height: 35px;
+    width: 35px;
+    border:4px solid lightgray;
+    border-top:3px solid coral;
+    border-left:4px solid coral;
+    border-radius: 50%; 
+    animation: spinner 1s linear infinite;
+    z-index: 2;
+    opacity: 0.8;
+}
+
+@keyframes spinner {
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.err {
+    width: 300px;
+    height: 100px;
+    background-color: #f33e41;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.5s ease;
+    position: fixed;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    right: 50px;
+    justify-content: center;
+    transform: translateX(600%);
+    z-index: 5;
+}
+.err hr {
+    background-color: white;
+    border: 1.5px solid white;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+    animation: 10s load ;
+    transition: 2s ease;
+}
+@keyframes load{
+  0%{
+   width: 2px;
+  }
+  100%{  
+    padding-left: 86%;
+  }
+}
+.err button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #f82528;
+    border: none;
+    cursor: pointer;
+    font-size: larger;
+    color: white;
+}
+.open-err {
+   width: 300px;
+   border: 1px solid white;
+   height: 100px;
+   background-color: #f82528;
+   border-radius: 5px;
+   text-align: center;
+   position: fixed;
+   top: 10px;
+   display: flex;
+   align-items: center;
+   right: 50px;
+   justify-content: center;
+   z-index: 5;
+   transform: translateX(-0%);
+   transition: 0.5s ease;
+}
+.err p {
+    position: absolute;
+    color: #fff;
+    font-size: large;
+    top: 20px;
+}
+
+.error {
+    width: 250px;
+    height: 10px;
+    background-color: red;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.5s ease;
+}
+.error h4 {
+    position: relative;
+    color: #fff;
+    bottom: 14%;
+    font-size: 15px;
+}
+.sec {
+    width: 300px;
+    height: 100px;
+    background-color: green;
+    border-radius: 5px;
+    text-align: center;
+    transition: 0.5s ease;
+    position: fixed;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    right: 50px;
+    justify-content: center;
+    transform: translateX(600%);
+    z-index: 5;
+    animation: 5s tr;
+}
+.sec hr {
+    background-color: white;
+    border: 1.5px solid white;
+    border-radius: 5px;
+    position: absolute;
+    right: 20px;
+    bottom: 5px;
+    animation: 10s secLO ;
+    transition: 2s ease;
+}
+@keyframes secLO{
+  0%{
+   width: 2px;
+  }
+  100%{  
+    padding-left: 86%;
+  }
+}
+.sec button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: green;
+    border: none;
+    cursor: pointer;
+    font-size: larger;
+    color: white;
+}
+.open-sec {
+   width: 300px;
+   border: 1px solid white;
+   height: 100px;
+   background-color: green;
+   border-radius: 5px;
+   text-align: center;
+   position: fixed;
+   top: 10px;
+   display: flex;
+   align-items: center;
+   right: 50px;
+   justify-content: center;
+   z-index: 5;
+   transform: translateX(-0%);
+   transition: 0.5s ease;
+}
+.sec p {
+    color: #fff;
+    font-size: 13px;
+    width: 100%;
+    top: 20px;
+}
+/* ///////////////// reset password /////////////// */
+.reset-card{
+    width: 30%;
+    height: 60%;
+    background-color: white;
+    border-radius: 4px;
+    z-index: 5;
+    position: absolute;
+    left: 35%;
+    top: 20%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.reset-card input {
+    width:60%;
+    outline: none;
+    height: 20px;
+    padding: 10px;
+    direction: rtl;
+
+}
+.reset-card button {
+    width: 66%;
+    border: none;
+    background-color:  #0f4ccf;
+    color: wheat;
+    border-radius: 5px;
+    height:40px;
+    padding: 10px;
+    font-size: larger;
+    cursor: pointer;
+}
+.reset-card button :disabled{
+    opacity: 0.5;
+    cursor: progress;
+}
+.reset-card p {
+    font-size: 18px;
+    margin-top: -20px;
+}
+/* //////////////// forget password /////////////// */
+
+.forget-card{
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    position: absolute;
+    z-index: 5;
+    border-radius: 4px;
+    left: 25%;
+    display: flex;
+    top: 25%;
+}
+.forget-right{
+    width: 40%;
+    height: 100%;
+    background-color: grey;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+.forget-left{
+    width: 60%;
+    display: flex;
+    height: 100%;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+}
+.forget-left input {
+    width: 70%;
+    height: 20px;
+    padding: 10px;
+    direction: rtl;
+    outline: none;
+    border:none;
+    border-bottom: 1px solid silver;
+    transition: 0.5s ease;
+}
+.forget-left input:focus {
+    border-bottom: 1px solid black;
+    transition: 0.5s ease;
+}
+.forget-left button {
+    padding: 10px;
+    font-size: large;
+    margin-top: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: #0f4ccf;
+    width: 75%;
+    color: white;
+    cursor: pointer;
+}
+.forget-left button:disabled {
+  opacity: 0.5;
+  cursor: progress;
+}
+@media(max-width:700px) and (min-width:100px){
+    .forget-card{
+        flex-flow: column-reverse;
+        left: 15%;
+        width: 70%;
+        height: 500px;
+        top: 15%;
+    }
+    .forget-left{
+        width: 100%;
+        height: 50%;
+    }
+    .forget-right{
+        width: 100%;
+        height: 50%;
+        border-bottom-left-radius:4px;
+        border-top-right-radius:0px;
+    }
+}

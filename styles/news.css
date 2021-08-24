@@ -1,0 +1,374 @@
+.news {
+    position: relative;
+    width: 99%;
+    height: 350px;
+    left: 4.5px;
+    border-radius: 10px;
+    background-color: white;
+    display: flex;
+    flex-flow: column;
+    margin-top: 10px;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.2) , 0px 0px 10px rgba(0,0,0,0.2);
+}
+
+.image-news  {
+    width:16%;
+    height: 90%;
+    position: absolute;
+    left: 1%;
+    top: 5%;
+    border-radius: 10px;
+    pointer-events: none;
+}
+.news-image {
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+}
+
+.news p {
+    margin-right: 10px;
+}
+
+.news-title {
+    width: 100%;
+    height: 20%;
+    border-radius:10px ;
+    position: relative;
+    background-color: grey;
+}
+
+.news-title p {
+    position: absolute;
+    right: 40px;
+    top: 4px;
+    color: white;
+    font-size: 20px;
+}
+.news-title a {
+    border-radius: 8px;
+    border: none;
+    padding:7px 15px;
+    background-color: turquoise;
+    color: white;
+    position: relative;
+    top: 25px;
+    left: 20px;
+    font-size: large;
+    cursor: pointer;
+}
+.container {
+    border: 1px solid grey;
+    position: relative;
+    max-width:97%;
+    height: 125px;
+    left: 1.5%;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    top: 10px;
+    text-align: right;
+    direction: rtl;
+}
+
+.container p {
+    width: 76%;
+    top: 10%;
+    font-size: large;
+    direction: rtl;
+    cursor: pointer;
+}
+.container p:hover {
+    color: royalblue;
+}
+
+
+@media(max-width:700px)and (min-width:1px){
+    .container img{
+      width: 110px;
+    }
+    .container p {
+        position: relative;
+        top: 10%;
+        font-size: 12px;
+        width: 66%;
+        direction: rtl;
+    }
+    .news-title p {
+        font-size: 18px;
+        top: 5px;
+        right: 5px;
+    }
+    .news-title button {
+        border-radius: 10px;
+        border: none;
+        padding: 5px 10px;
+        background-color: turquoise;
+        color: white;
+        position: relative;
+        top: 18px;
+        left: 20px;
+        font-size: larger;
+        cursor: pointer;
+    }
+    .news-title a {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+    .image-news {
+        width: 28%;
+    }
+}
+
+/* /////////// Year component ////////// */
+.year {
+    width: 99%;
+    height: 60px;
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 0 20px 20px rgba(0,0,0,0.2) , 0px 0px 50px rgba(0,0,0,0.2);
+    border-radius: 10px;
+    z-index: 0;   
+    position: relative;
+    left: 4.5px;
+    transition: 0.5s ease;
+    display: flex;
+    justify-content: end;
+}
+.open-year {
+    height: 280px;
+    background-color: white;
+}
+#drp {
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    left: 20px;
+    top: 38%;
+    transform: rotate(270deg);
+    transition: 0.5s ease;
+}
+#open-drp {
+    width: 20px;
+    height: 15px;
+    position: absolute;
+    left: 20px;
+    top: 38%;
+    transform: rotate(360deg);
+    transition: 0.5s ease;
+}
+.year-top {
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    border-radius: 10px;
+    height: 60px;
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+}
+.year-top p {
+    font-size: 16px;
+    position: relative;
+    top: 2px;
+    text-align: right;
+    margin: 15px;
+}
+
+.place-right {
+    width: 50%;
+    margin-top: 5%;
+    height: 80%;
+    margin-top: 6%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.hide{
+    display: none;
+}
+.place-right select {
+    width: 50%;
+    height:20%;
+    background-color: coral;
+    direction: rtl;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+.place-left {
+    width: 50%;
+    margin-top: 6%;
+    height: 80%;
+    margin-top: 6%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.place-left select {
+    width: 50%;
+    height:20%;
+    background-color:coral;
+    font-size: 15px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    direction: rtl;
+    cursor: pointer;
+}
+.year button {
+    position: absolute;
+    bottom: 5px;
+    left:43%;
+    font-size: larger;
+    padding: 5px 30px;
+    color: white;
+    background-color: turquoise;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+@media(max-width:700px)and (min-width:10px){
+    .year{
+        display: none;
+    }
+}
+/* /////////////// components ///////////// */
+.ne{
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+}
+.news-right {
+    width: 60%;
+    display: flex;
+    flex-flow: column;
+    float: right;
+    min-height: 100%;
+    justify-content: space-evenly;
+}
+.hole-card{
+    width: 70%;
+    height: 100%;
+    margin-top: 200px;
+}
+.new-card {
+ width:100%;
+ height: 200px;
+ background-color: white;
+ border-radius: 10px;
+ margin-top: 10px;
+ text-align: right;
+ direction: rtl;
+ padding-right: 10px;
+ box-shadow: 0px 5px 10px rgba(0,0,0,0.2) , 0px 0px 20px rgba(0,0,0,0.1);
+ display: flex;
+ align-items: center;
+ flex-flow: row-reverse;
+ transition: 0.3s ease;
+ cursor: pointer;
+}
+.image-component {
+    width:30%;
+    height: 90%;
+    border-radius: 10px;
+    position: relative;
+    margin-left: 1%;
+}
+.property {
+    width: 80%;
+    height: 98%;
+    display: flex;
+    flex-flow: column;
+    margin-right: 0px;
+    pointer-events: none;
+}
+
+.new-card:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease;
+
+}
+
+.news-left{
+    width: 38%;
+    min-height:100%;
+    border-radius: 5px;
+    margin-top: 10px;
+    display: flex;
+    flex-flow: column;
+}
+.ne footer {
+    width: 100%;
+    height: 100px;
+    background-color: darkblue;
+    position: absolute;
+    top:130%;
+}
+.page {
+ width:101.5%;
+ height: 100px;
+ position: relative;
+ top: 10px;
+ text-align: right;
+ display: flex;
+ justify-content: right;
+ background-color: white;
+ border-radius: 5px;
+ box-shadow: 0px 5px 10px rgba(0,0,0,0.2) , 5px 5px 25px rgba(0,0,0,0.1);
+}
+.news-left p{
+    text-align: right;
+    margin: 10px;
+    font-size: large;
+    position: relative;
+    right: 10px;
+}
+.news-left hr {
+    width: 90%;
+    background-color: silver;
+    opacity: 0.7;
+    text-align: center;
+    margin-top: 5px;
+}
+.most {
+    width:100%;
+    height:200px;
+    border-radius: 5px;
+    position: relative;
+    top: 0px;
+    background-color: white;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2) , 5px 5px 25px rgba(0,0,0,0.1);
+}
+.insta-card {
+    width: 100%;
+    height: 150px;
+    position: relative;
+    top: 10px;
+    background-color: purple;
+    box-shadow: 0px 5px 10px rgba(0,0,0,0.2) , 5px 5px 25px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.insta-card img {
+    width: 40%;
+    height:90%;
+    position: absolute;
+    top: 8%;
+    left: 32%;
+}
+.pagination-bttn {
+    display: flex;
+    justify-content: right;
+    direction: rtl;
+    align-items:center ;
+    top: -20px;
+    width: 94%;
+    height: 100%;
+}

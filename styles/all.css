@@ -1,0 +1,597 @@
+/* like */
+.erro {
+    position: fixed;
+    width: 200px;
+    height: 150px;
+}
+/* ///////back-Drop////////  */
+.backdrop {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.4;
+    position: fixed;
+    z-index: 2;
+}
+/* ///////////serial_Irani///////////// */
+.irani-card{
+    width: 90%;
+    background-color: white;
+    margin-top: 10px;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 0px 10px rgba(0,0,0,0.2) , 0px 0px 10px rgba(0,0,0,0.2);
+    direction: rtl;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    padding-bottom: 50px;
+}
+.irani {
+    margin-top: 20px;
+    margin-right: 8px;
+    width: 90%;
+    text-align: center;
+    height: 220px;
+}
+.irani-card img {
+    width:190px;
+    height: 190px;
+    border-radius: 10px;
+    position: relative;
+    right: 2%;
+    top: -5px;
+    margin: 3px;
+    cursor: pointer;
+}
+.irani-card p {
+    position: relative;
+    top:-5px;
+    font-size: 16px;
+    left: 20px;
+    opacity: 0.7;
+}
+.irani p {
+    left: 0;
+    cursor: pointer;
+    top: -10px;
+    text-align: center;
+}
+.irani:hover {
+    color: cadetblue;
+}
+/* //////serial-Slider///////  */
+
+.serial-slider{
+    width: 90%;
+    height: 350px;
+    background-color: white;
+    position: relative;
+    box-shadow: 0 0px 10px rgba(0,0,0,0.1) , 0px 0px 20px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    z-index: 0;
+    margin-top: 10px;
+}
+.serial-slider img {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.serial-slider p {
+    text-align: right;
+    position: relative;
+    top: 5px;
+    right: -80px;
+    font-size: 12px;
+    opacity: 0.9;
+    max-width: 50%;
+}
+
+.serial-card{
+    max-width:160px;
+    height: 280px;
+    border-radius: 10px;
+    top:50px;
+    left: 8px;
+    position: relative;
+    opacity: 0.1;
+    transform: scale(0.8);
+    transition: 0.3s ease; 
+    z-index: 0;
+}
+.active-serial-card{
+    max-width:160px;
+    height: 280px;
+    border-radius: 10px;
+    top:60px;
+    position: relative;
+    opacity: 1;
+    left: 45px;
+    transform: scale(1.2);  
+    transition: 0.3s ease;
+    z-index: 2;
+    cursor: pointer;
+}
+.serial-card img {
+    width: 170px;
+    height: 200px;
+    border-radius: 10px;
+}
+
+.active-serial-card img {
+    width: 160px;
+    height: 193px;
+    border-radius: 10px;
+}
+.doc-circle {
+    width: 33px;
+    height: 33px;
+    background-color: white;
+    border: 3.5px solid slateblue;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 18px;
+    top: 12px;
+}
+.doc-circle img {
+    width: 100%;
+    height: 100%;
+    margin-top: 2.5px;
+    margin-left: -0.1px;
+}
+.archive {
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color: slateblue;
+    border-radius: 5px;
+    font-size: 11px;
+    margin-left: 10px;
+    color: white;
+    position: relative;
+    top: -20px;
+}
+
+
+/* ////////////////////// genres-card ///////////////////// */
+.jenres {
+    width: 90%;
+    height: 340px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.2) , 0px 0px 10px rgba(0,0,0,0.2);
+    direction: rtl;
+}
+.genres {
+    width: 70%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    direction: rtl;
+    
+}
+
+.switch {
+    width: 45px;
+    height: 30px;
+    background-color: grey;
+    border-radius: 5px;
+    font-size:9px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    padding: 0px 10px;
+    cursor: pointer;
+    margin-top: 26px;
+    margin-left: 5px;
+    position: absolute;
+    left: 25px;
+}
+.switch span {
+     cursor: pointer;
+     z-index: 1;
+}
+.active-span {
+ background-color:blue;
+ padding: 9px 0px;
+ width: 33px;
+ position: absolute;
+ height: 8px;
+ border-radius: 5px;
+ transform: translateX(9px);
+ z-index: 0;
+ transition: 0.4s ease;
+}
+.not-active {
+    background-color:blue;
+    padding: 9px 0px;
+    width: 33px;
+    position: absolute;
+    height: 8px;
+    border-radius: 5px;
+    transform: translateX(-21px);
+    z-index: 0;
+    transition: 0.4s ease;
+}
+.jenres p {
+    font-size: 12px;
+    width: 67%;
+    opacity: 0.9;
+    margin-right: 66px;
+    position: relative;
+    top: 10px;
+}
+.place-r {
+    width: 50%;
+    height: 100%;
+    float: right;
+}
+.place-l {
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+.place-l li {
+    padding: 10px;
+    margin: 5px; 
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    left: 25px;
+    top:0px;
+    opacity: 0.8;
+    font-size: 15px;
+}
+.place-r li {
+    padding: 10px;
+    margin:5px; 
+    text-align: center;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    list-style: none;
+    position: relative;
+    left: 15px;
+    top:0px;
+    opacity: 0.8;
+}
+.circle {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    right: 8%;
+    margin-top: -35px;
+    top: 2px;
+    background-color: #f2d54d;
+    border: 3px solid black;
+    border-radius: 50%;
+}
+.circle img {
+    width: 80%;
+    height: 80%;
+    margin: 4px;
+}
+.jenres li:hover {
+  background-color: #f2d54d;
+}
+.jenres li:active {
+    background-color: #f2d54d;
+  }
+  @media(max-width:1100px)and (min-width:801px){
+
+    .circle {
+        width: 30px;
+        height: 30px;
+        top: 20px;
+        left: 6px;
+    }
+    .jenres p {
+        font-size: 12px;
+    }
+    .place-l li {
+        padding: 10px;
+        margin: 0px;
+        left: 30px;
+        font-size: 13px;
+    }
+    .place-r li {
+        padding: 10px;
+        margin: 0px;
+        left: 20px;
+        font-size: 13px;
+
+    }
+  }
+  /* /////////// comments //////////// */
+  .hole-comment {
+    background-color: white;
+    border-radius: 10px;
+    width: 100%;
+    max-height:100%;
+    z-index: 1;
+    position: relative;
+    margin-top: 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1) , 0px 0px 20px rgba(0,0,0,0.1);
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    top: 25px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue';
+
+}
+.new-comment {
+    width: 60%;
+    position: relative;
+    top: 10px;
+    float: right;
+    height: 280px;
+}
+
+.new-comment textarea {
+    width: 90.5%;
+    margin-right: 8px;
+    margin-top:90px;
+    height: 150px;
+    direction: rtl;
+    resize: none;
+    border-radius: 3px;
+    border: none;
+    outline: none;
+    background-color: #f2f3f8;
+}
+.new-comment button {
+    padding: 10px 20px;
+    float: right;
+    margin-right: 28px;
+    margin-top:70px;
+    font-size: large;
+    cursor: pointer;
+    border-radius: 5px;
+    border:none;
+    background-color: cadetblue;
+    color: white;
+}
+.hole-comment hr {
+    width: 100%;
+    position: absolute;
+    top: 245px;
+    background-color: silver;
+    opacity: 0.5;
+}
+.comments {
+    width: 85%;
+    border-radius: 10px;
+    position: relative;
+    top:-8px;
+}
+.mess {
+    width: 98%;
+    direction: rtl;
+    margin: 8px;
+    color: black;
+    height: max-content;
+    background-color: #eceef3;
+    border-radius: 4px;
+    float: right;
+}
+.admin-mess {
+    width: 96%;
+    direction: rtl;
+    margin: 8px;
+    border-radius: 4px;
+    padding-bottom: 30px;
+    float: right;
+    background-color: #407de7;
+    color: white;
+    position: relative;
+    right: 14px;
+}
+.admin-mess p {
+    position: relative;
+    top: -5px;
+    right: 65px;
+    direction: rtl;
+    font-size: large;
+}
+.admin-mess img {
+    width: 55px;
+    top: -40px;
+    right: 5px;
+    position: relative;
+    border-radius: 50%;
+}
+.mess p {
+    position: relative;
+    top: -5px;
+    margin-right: 60px;
+    direction: rtl;
+    max-width: 80%;
+    direction: rtl;
+    text-align: right;
+}
+.mess img {
+    width: 50px;
+    right: 5px;
+    position: relative;
+    border-radius: 50%;
+}
+.comment-top {
+    width: 100%;
+    display: flex;
+    height: 60px;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+    right: 5px;
+
+}
+.comment-top input {
+    width: 42.5%;
+    direction: rtl;
+    height: 50%;
+    border-radius: 3px;
+    border: none;
+    background-color: #f2f3f8;
+    outline: none;
+}
+.mess button {
+    padding: 5px 15px;
+    position: relative;
+    font-size: medium;
+    bottom:10px;
+    right:88%;
+    border: none;
+    color: white;
+    background-color: cadetblue;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.comment-bot {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+@media(max-width:800px)and (min-width:1px){
+    .hole-comment {
+        width: 97%;
+        
+    }
+    .new-comment {
+       width: 80%;
+       height: 360px;
+    }
+    .hole-comment hr {
+        width: 100%;
+        position: absolute;
+        top: 310px;
+        background-color: silver;
+        opacity: 0.5;
+    }
+    .comments button{
+        margin-right: -25px;
+    }
+    .mess p {
+        font-size: small;
+    }
+.admin-mess {
+    font-size: small;
+
+}
+   
+    
+}
+#bottw {
+    right: 63px;
+}
+#bottc {
+    right: 63px;
+}
+@media(max-width:1200px)and (min-width:801px){
+    .ads {
+        width: 96%;
+        left: 0%;
+    }
+    .irani-card {
+        width: 96%;
+        left: 2%;
+        padding-bottom: 15px;
+    }
+    .irani-card p {
+        font-size: 14px;
+        right: 4px;
+    }
+    .irani-card img {
+        right: 0%;
+    }
+    .active-serial-card{
+        max-width:110px;
+        height: 280px;
+    }  
+    
+.active-serial-card img {
+    width: 140px;
+    height: 183px;
+    border-radius: 10px;
+}
+.serial-slider h3 {
+    text-align: right;
+    position: relative;
+    top:0px;
+    font-size: 14px;
+    right: 55px;
+}
+.serial-slider p {
+    font-size: 12px;
+}
+.serial-slider .doc-circle {
+    width: 30px;
+    height: 30px;
+    right: 10px;
+}
+.serial-slider p {
+    right: -54px;
+    font-size:10px;
+}
+#bottw {
+    right: 48px;
+}
+#bottc {
+    right: 48px;
+}
+.serial-slider a {
+    padding: 5px;
+    top: -10px;
+    margin-left: 5px;
+}
+.serial-slider {
+    width: 96%;
+    left: -5px;
+}
+.jenres {
+    width: 96%;
+    margin-left: 8px;
+    height: 320px;
+}
+.jenres a {
+    font-size: 15px;
+}
+
+.jenres .switch {
+    left: 12px;
+}
+.jenres .circle {
+    top: -0px;
+    right: 10px;
+}
+.jenres p {
+    font-size: 10px;
+    right: -9px;
+}
+.mess button {
+    right: 84%;
+}
+
+}
+@media(max-width:1410px)and (min-width:1100px) {
+    .serial-slider p {
+        right: -60px;
+    }
+    .imdb img {
+        left:2.5px ;
+    }
+}
+
+
+
